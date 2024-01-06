@@ -6,7 +6,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/netbirdio/netbird.git
-PKG_SOURCE_VERSION:=8b4ec96516135a60649bd44cce82428a55354920
+PKG_SOURCE_VERSION:=5469de53c521890bfde5fa6f6a29a915b2ee8f0e
 PKG_SOURCE_DATE:=20240116
 PKG_MIRROR_HASH:=skip
 
@@ -17,9 +17,9 @@ PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
 
 GO_PKG:=github.com/netbirdio/netbird
-GO_PKG_INSTALL_EXTRA:=extra/file extra/dir
-GO_PKG_EXCLUDES:=gui
+GO_PKG_BUILD_PKG:=github.com/netbirdio/netbird/client
 GO_PKG_LDFLAGS:=-s -w
+GO_PKG_LDFLAGS_X:=github.com/netbirdio/netbird/version.version=$(PKG_VERSION)
 
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
