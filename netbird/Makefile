@@ -4,8 +4,8 @@ PKG_NAME:=netbird
 PKG_VERSION:=0.25.3
 PKG_RELEASE:=$(AUTORELEASE)
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/netbirdio/netbird/tar.gz/v$(PKG_VERSION)?
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/netbirdio/netbird.git
 PKG_SOURCE_VERSION:=1f3a12d9413a4ce0382b195dbb853b54094eff92
 PKG_SOURCE_DATE:=20240116
 PKG_MIRROR_HASH:=skip
