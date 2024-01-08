@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netbird
-PKG_VERSION:=0.25.3
+PKG_VERSION:=0.25.4
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
