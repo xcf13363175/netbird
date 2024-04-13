@@ -20,7 +20,7 @@ GO_PKG:=github.com/netbirdio/netbird
 GO_PKG_BUILD_PKG:=github.com/netbirdio/netbird/client
 GO_PKG_LDFLAGS:=-s -w
 GO_PKG_LDFLAGS_X:=github.com/netbirdio/netbird/version.version=$(PKG_VERSION)
-GO_PKG_EXCLUDES:=ui
+#GO_PKG_EXCLUDES:=ui
 
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
@@ -28,7 +28,7 @@ include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 define Package/$(PKG_NAME)/config
 config NETBIRD_COMPRESS_UPX
 	bool "Compress executable files with UPX"
-	default n
+	default y
 endef
 
 define Package/netbird
