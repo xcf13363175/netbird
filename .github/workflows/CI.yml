@@ -50,8 +50,8 @@ jobs:
 
       - name: Install OpenWrt SDK
         run: |
-          wget -O openwrt-sdk.tar.xz ${{ matrix.target.sdk }}
-          xz -q -d openwrt-sdk.tar.xz && tar -xvf openwrt-sdk.tar
+          wget -O openwrt-sdk.tar.zst ${{ matrix.target.sdk }}
+          tar -I zstd -xvf openwrt-sdk.tar.zst
           mv -f openwrt-sdk-* openwrt-sdk
       - name: Build Package
         run: |
