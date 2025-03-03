@@ -75,7 +75,7 @@ jobs:
           make package/netbird/compile V=s CONFIG_NETBIRD_COMPRESS_UPX=y
           tree bin/packages/
       - name: Archive package
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: netbird-${{ matrix.target.arch }}
           path: openwrt-sdk/bin/packages/*/netbird/netbird*.ipk
