@@ -38,7 +38,7 @@ jobs:
             sdk: "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-sdk-ramips-mt7621_gcc-12.3.0_musl.Linux-x86_64.tar.xz"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@main
       - name: Install build requirements
         run: |
           sudo apt-get update
