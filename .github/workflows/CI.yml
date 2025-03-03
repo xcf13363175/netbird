@@ -88,19 +88,19 @@ jobs:
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2.0.6
         with:
-        token: ${{ github.token }}
-        repository: ${{ github.repository }}
-        retain_days: 1
-        keep_minimum_runs: 1
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 1
 
       - name: Remove old Releases
         uses: dev-drprasad/delete-older-releases@v0.3.3
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         with:
-        keep_latest: 2
-        delete_tags: true
+          keep_latest: 2
+          delete_tags: true
         env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          overwrite: true
-          file: openwrt-sdk/bin/packages/*/netbird/netbird*.ipk
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            overwrite: true
+            file: openwrt-sdk/bin/packages/*/netbird/netbird*.ipk
           tag_name: ${{ github.ref }}
