@@ -48,7 +48,7 @@ endif
 endef
 
 define Package/netbird/conffiles
-/etc/netbird/config.json
+/etc/netbird/default.json
 endef
 
 define Package/netbird/install
